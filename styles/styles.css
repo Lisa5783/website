@@ -1,0 +1,72 @@
+
+* {
+    box-sizing: border-box;
+    
+}
+
+/* Блоки */
+div, header, footer, main, nav {
+    margin: 15;
+    margin-bottom: 15px;
+    padding:20;
+}
+
+/* Текст */
+body {
+    font-family: 'Roboto', sans-serif; /* Подключите Google-шрифт в HTML */
+    font-size: 16px;
+    color: #333;
+}
+
+/* Изображения */
+img {
+    width: 50%;
+    height: auto;
+}
+
+/* Таблицы */
+table {
+    width: 40%;
+    border-collapse: collapse;
+
+}
+
+td, th {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Ссылки */
+a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+footer{
+    background-color: black;
+    color: white;
+}
+footer a {
+    color: white; /* Цвет ссылок в футере при наведении */
+}
+
+footer a:hover {
+    color: lightgray; /* Цвет ссылок в футере при наведении */
+}
+
+nav a {
+    margin-right: 15px; /* Отступ справа от каждой ссылки */
+    text-decoration: none;
+    color: blue;
+}
+
+nav a:last-child {
+    margin-right: 0; /* Убираем отступ у последней ссылки */
+}

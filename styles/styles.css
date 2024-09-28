@@ -1,60 +1,73 @@
-
 * {
     box-sizing: border-box;
-    
 }
 
 /* Блоки */
-div, header, footer, main, nav {
-    margin: 15;
+header, nav {
+    margin: 20px;
     margin-bottom: 15px;
-    padding:20;
+    margin-left: 20px; /* Отступ слева */
+}
+
+div {
+    margin: 15px;
+    margin-bottom: 15px;
+    margin-left: 20px; /* Отступ слева */
 }
 
 /* Текст */
-body {
+html, body {
+    height: 100%;
     font-family: 'Roboto', sans-serif; /* Подключите Google-шрифт в HTML */
     font-size: 16px;
     color: #333;
+    margin: 0;
 }
 
 /* Изображения */
 img {
     width: 50%;
+    padding-left: 10px;
     height: auto;
+    margin-left: 20px; /* Отступ слева */
+    margin-right: auto; /* Добавлено для центрирования */
 }
 
 /* Таблицы */
 table {
     width: 40%;
+    padding-left: 10px;
     border-collapse: collapse;
-
+    margin-left: 20px; /* Отступ слева */
 }
 
 td, th {
     padding: 8px;
     border: 1px solid #ddd;
-    text-align: center;
 }
 
 /* Ссылки */
 a {
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Можно удалить, если не требуется переопределение */
     font-size: 20px;
-    color: blue;
+    color: black;
+    margin-left: 20px; /* Отступ слева */
 }
 
 a:hover {
     color: red;
 }
 
-footer{
+footer {
+    width: 100%;
+    height:auto;
     background-color: black;
     color: white;
 }
+
 footer a {
-    color: white; /* Цвет ссылок в футере при наведении */
+    color: white; /* Цвет ссылок в футере */
 }
 
 footer a:hover {
@@ -62,11 +75,54 @@ footer a:hover {
 }
 
 nav a {
-    margin-right: 15px; /* Отступ справа от каждой ссылки */
+    margin: 10px;
+    margin-left: 20px; /* Отступ слева */
     text-decoration: none;
-    color: blue;
+    color:black;
 }
 
-nav a:last-child {
-    margin-right: 0; /* Убираем отступ у последней ссылки */
+a.active{
+    color: tomato;
+    margin-left: 20px; /* Убедитесь, что состояние активной ссылки также имеет отступ слева */
+}
+
+main{
+    flex:1;
+    margin-left: 20px; /* Отступ слева */
+}
+@media (min-width: 1px) and (max-width: 599px){
+    body>main>section>table{
+        font-size: 12px;
+    }
+}
+@media (min-width:600px) and (max-width:799px){
+    body>header>h1{
+        text-align: center;
+    }
+    body>header>nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    main.a{
+        font-size: calc(1em + 4px);
+    }
+    body>main>section>img{
+        width: 100%;
+        padding-right: 20px;
+    }
+    body>main>section>table{
+        font-size: 14px;
+    }
+}
+@media (min-width:800px){
+    body>main>section>img{
+        width: 500px;
+        padding-right: 20px;
+    }
+    body>header>nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
 }

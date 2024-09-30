@@ -4,21 +4,19 @@
 
 /* Блоки */
 header, nav {
-    margin: 20px;
-    margin-bottom: 15px;
-    margin-left: 20px; /* Отступ слева */
+    padding: 0;
+    margin: 0;
 }
 
 div {
-    margin: 15px;
-    margin-bottom: 15px;
-    margin-left: 20px; /* Отступ слева */
+    padding: 0;
+    margin: 0;
 }
 
 /* Текст */
 html, body {
     height: 100%;
-    font-family: 'Roboto', sans-serif; /* Подключите Google-шрифт в HTML */
+    font-family: 'Roboto', sans-serif; /* Подключает Google-шрифт в HTML */
     font-size: 16px;
     color: #333;
     margin: 0;
@@ -27,32 +25,27 @@ html, body {
 /* Изображения */
 img {
     width: 50%;
-    padding-left: 10px;
     height: auto;
-    margin-left: 20px; /* Отступ слева */
-    margin-right: auto; /* Добавлено для центрирования */
+    margin-right: auto; 
 }
 
 /* Таблицы */
 table {
     width: 40%;
-    padding-left: 10px;
     border-collapse: collapse;
-    margin-left: 20px; /* Отступ слева */
 }
 
 td, th {
-    padding: 8px;
     border: 1px solid #ddd;
 }
 
 /* Ссылки */
 a {
+    margin-right: 20px;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif; /* Можно удалить, если не требуется переопределение */
+    font-family: 'Roboto', sans-serif; 
     font-size: 20px;
     color: black;
-    margin-left: 20px; /* Отступ слева */
 }
 
 a:hover {
@@ -75,8 +68,6 @@ footer a:hover {
 }
 
 nav a {
-    margin: 10px;
-    margin-left: 20px; /* Отступ слева */
     text-decoration: none;
     color:black;
 }
@@ -88,14 +79,13 @@ a.active{
 
 main{
     flex:1;
-    margin-left: 20px; /* Отступ слева */
 }
-@media (min-width: 1px) and (max-width: 599px){
+@media (min-width: 1px) and (max-width: 400px){
     body>main>section>table{
         font-size: 12px;
     }
 }
-@media (min-width:600px) and (max-width:799px){
+@media (min-width:401px) and (max-width:600px){
     body>header>h1{
         text-align: center;
     }
@@ -105,7 +95,7 @@ main{
         align-items: center;
     }
     main.a{
-        font-size: calc(1em + 4px);
+        font-size: 14px;
     }
     body>main>section>img{
         width: 100%;
@@ -115,7 +105,7 @@ main{
         font-size: 14px;
     }
 }
-@media (min-width:800px){
+@media (min-width:601px) and (max-width:800px){
     body>main>section>img{
         width: 500px;
         padding-right: 20px;

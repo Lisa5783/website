@@ -2,7 +2,6 @@
 section>div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-left: 40px;
     gap: 10px;
 
 }
@@ -23,9 +22,6 @@ section>div>div{
     background-color: white;
     justify-content: space-between; /*Распределяет кнопки равномерно */
     
-}
-h2{
-    margin-left: 40px;
 }
 section>div>div>p{
     line-height: 1;

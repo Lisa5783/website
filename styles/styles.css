@@ -3,9 +3,14 @@
 }
 
 /* Блоки */
-header, nav {
+header{
     padding: 0;
     margin: 0;
+    margin-left: 40px;
+}
+nav {
+    padding: 0;
+    margin: 10px;
 }
 
 div {
@@ -74,11 +79,11 @@ nav a {
 
 a.active{
     color: tomato;
-    margin-left: 20px; /* Убедитесь, что состояние активной ссылки также имеет отступ слева */
 }
 
 main{
     flex:1;
+    margin-left: 40px;
 }
 @media (min-width: 1px) and (max-width: 400px){
     body>main>section>table{

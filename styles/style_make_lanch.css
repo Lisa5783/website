@@ -105,3 +105,71 @@ section>div>div>button{
         grid-template-columns: repeat(3, 1fr); 
     }
 } 
+
+#order-form { 
+    margin-top: 40px; 
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+} 
+ 
+.try{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items:center;
+}
+.form-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 100px; 
+} 
+ 
+/* fieldset { 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    margin: 0; 
+} 
+  */
+legend { 
+    font-weight: bold; 
+} 
+ 
+label { 
+    display: block; 
+    margin-bottom: 5px; 
+} 
+ 
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="time"], 
+select, 
+textarea { 
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+} 
+ 
+textarea { 
+    height: 100px; 
+} 
+ 
+button { 
+    padding: 10px 20px; 
+    background-color:green; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+} 
+ 
+button[type="reset"] { 
+    background-color: #ccc; 
+} 
+ 
+button:hover { 
+    background-color: #ff4500; 
+} 

@@ -58,8 +58,10 @@ a:hover {
 }
 
 footer {
+    margin-top: 10px;
     width: 100%;
     height:auto;
+    padding: 5px;
     background-color: black;
     color: white;
 }

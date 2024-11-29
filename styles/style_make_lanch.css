@@ -153,3 +153,11 @@ section>div>div>button{
         grid-template-columns: repeat(3, 1fr); 
     }
 } 
+.my-button:active {
+  background-color: lightgreen;
+  color: green;
+} 
+.active1{
+background-color: lightgreen;
+  color: green;
+}

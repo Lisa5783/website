@@ -136,37 +136,20 @@ section>div>div>button{
   /* Адаптивность */
   @media (max-width: 800px) {
     section > div {
-        grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+        display: grid;                       
+        grid-template-columns: 1fr;                
     }
-  
-    nav {
-        flex-direction: column;
-        align-items: center; /* Центрируем элементы в навигации */
-    }
-  
-    nav a {
-        font-size: 12px; /* Увеличиваем шрифт на 4px */
-    }
-  }
-  
-  @media (max-width: 600px) {
-    section > div {
-        grid-template-columns: repeat(1, 1fr); /* 1 колонка */
-    }
-  
-    h1 {
-        text-align: center; /* Центрирование заголовков */
-    }
-  
-    section > h2 {
-        text-align: center; /* Центрирование заголовков */
-    }
-  }
-.my-button:active {
-    background-color: lightgreen;
-    color: green;
 } 
-.active1{
-  background-color: lightgreen;
-    color: green;
-}
+
+@media (min-width: 800px){
+    section>div>div{
+        display: flex;                       
+        justify-content: space-between;  
+        align-items: baseline;      
+    }
+
+    section>div{
+        display: grid;                       
+        grid-template-columns: repeat(3, 1fr); 
+    }
+} 

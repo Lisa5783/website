@@ -1,11 +1,11 @@
-
-section>div {
+section > div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-
-}
-section>div>div{
+    padding: 30px 40px;
+  }
+  
+  section > div > div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -20,19 +20,19 @@ section>div>div{
     filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
     cursor:pointer;
     background-color: white;
-    justify-content: space-between; /*Распределяет кнопки равномерно */
-    
-}
-section>div>div>p{
+    justify-content: space-between;
+  }
+  
+  section>div>p{
     line-height: 1;
-}
-section>div>div:hover{
+    text-align: left;
+  }
+
+  section > div > div:hover {
     border: 2px solid tomato;
-}
-section>div>div>button:hover{
-    background-color: lightgray;
-}
-section>div>div>img{
+  }
+  
+  section > div > div > img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -40,18 +40,27 @@ section>div>div>img{
     height: auto;
     border-radius: 35px;
 }
-.price{
-    font-size: 20px;
+.meal-price{
+    font-size: 18px;
+    /* font-weight: bold; */
+    line-height: 1;
+    text-align: left;
     padding: 0;
     margin:0
 }
-.name{
-    font-size:20px;
+.meal-name{
+    font-size:18px;
+    /* font-weight: bold; */
+    line-height: 1;
+    text-align: left;
     padding: 0;
     margin: 0;
 }
-.weight{
+.meal-weight{
     color:grey;
+    font-style: italic;
+    line-height: 1;
+    text-align: left;
     padding: 0;
     margin: 10;
 }
@@ -65,43 +74,99 @@ section>div>div>button{
     padding-right: 30px;
     border-radius: 10px;
     cursor: pointer;
-}
- @media (min-width: 1px) and (max-width:799px){
-    h1 {
-        text-align: center;                  
-    }
-
-    section>div>div{
-        display: flex;                      
-        flex-direction: column;              
-        align-items: center; 
-    }
-    
-
-    nav > a {
-        font-size: 20px;                    
-    }
-    
-    section > h2 {
-        text-align: center;                 
-    }
-    
-
+    margin-top: auto; /* Сдвигаем кнопку вниз */
+    width: 90%;
+    transition: background-color 0.3s;
+  }
+  
+  section > div > div > button:hover {
+    text-decoration: none;
+    background-color: tomato;
+  }
+  
+  section > div > div > button:active {
+    text-decoration: none;
+    background-color: tomato;
+  }
+  
+  p.note {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  
+  legend {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+  
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  fieldset {
+    width: 45%;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  input, select, textarea {
+    width: calc(100% - 20px);
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid tomato;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: none;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* button:hover {
+    background-color: lightgreen; 
+  } */
+  
+  /* Адаптивность */
+  @media (max-width: 800px) {
     section > div {
-        display: grid;                       
-        grid-template-columns: 1fr;                
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки */
     }
+  
+    nav {
+        flex-direction: column;
+        align-items: center; /* Центрируем элементы в навигации */
+    }
+  
+    nav a {
+        font-size: 12px; /* Увеличиваем шрифт на 4px */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    section > div {
+        grid-template-columns: repeat(1, 1fr); /* 1 колонка */
+    }
+  
+    h1 {
+        text-align: center; /* Центрирование заголовков */
+    }
+  
+    section > h2 {
+        text-align: center; /* Центрирование заголовков */
+    }
+  }
+.my-button:active {
+    background-color: lightgreen;
+    color: green;
 } 
-
-@media (min-width: 800px){
-    section>div>div{
-        display: flex;                       
-        justify-content: space-between;  
-        align-items: baseline;      
-    }
-
-    section>div{
-        display: grid;                       
-        grid-template-columns: repeat(3, 1fr); 
-    }
-} 
+.active1{
+  background-color: lightgreen;
+    color: green;
+}

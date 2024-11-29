@@ -152,7 +152,14 @@ section>div>div>button{
         display: grid;                       
         grid-template-columns: repeat(3, 1fr); 
     }
-} 
+}
+.my-button,
+.my-button:focus,
+.my-button:active {
+    border: none !important;
+    outline: none !important;
+    font-size: 20px;
+}
 .my-button:active {
   background-color: lightgreen;
   color: green;
@@ -160,4 +167,6 @@ section>div>div>button{
 .active1{
 background-color: lightgreen;
   color: green;
+  border: none !important;
+    outline: none !important;
 }

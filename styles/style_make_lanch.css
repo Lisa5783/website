@@ -1,172 +1,279 @@
-section > div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 30px 40px;
-  }
-  
-  section > div > div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex:1 1 300px;
-    align-items: center;
-    gap: 15px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 40px;
-    padding-right: 50px;
-    border-radius: 35px;
-    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
-    cursor:pointer;
-    background-color: white;
-    justify-content: space-between;
-  }
-  
-  section>div>p{
-    line-height: 1;
-    text-align: left;
-  }
+.menu-section {
+  max-width: 1200px;
+  margin: 0;
+  padding-left: 20px; 
+}
 
-  section > div > div:hover {
-    border: 2px solid tomato;
-  }
-  
-  section > div > div > img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: auto;
-    border-radius: 35px;
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
-.meal-price{
-    font-size: 18px;
-    /* font-weight: bold; */
-    line-height: 1;
-    text-align: left;
-    padding: 0;
-    margin:0
-}
-.meal-name{
-    font-size:18px;
-    /* font-weight: bold; */
-    line-height: 1;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-}
-.meal-weight{
-    color:grey;
-    font-style: italic;
-    line-height: 1;
-    text-align: left;
-    padding: 0;
-    margin: 10;
-}
-section>div>div>button{
-    background-color: #f1eee9;
-    border-color: #f1eee9;
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: auto; /* Сдвигаем кнопку вниз */
-    width: 90%;
-    transition: background-color 0.3s;
-  }
-  
-  section > div > div > button:hover {
-    text-decoration: none;
-    background-color: tomato;
-  }
-  
-  section > div > div > button:active {
-    text-decoration: none;
-    background-color: tomato;
-  }
-  
-  p.note {
-    font-style: italic;
-    font-size: 14px;
-    margin-bottom: 14px;
-  }
-  
-  legend {
-    font-size: 20px;
-    margin-bottom: 14px;
-  }
-  
-  form {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  fieldset {
-    width: 45%;
-    border: none;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  input, select, textarea {
-    width: calc(100% - 20px);
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid tomato;
-    border-radius: 4px;
-  }
-  
-  button {
-    background-color: none;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  /* button:hover {
-    background-color: lightgreen; 
-  } */
-  
-  /* Адаптивность */
-  @media (max-width: 800px) {
-    section > div {
-        display: grid;                       
-        grid-template-columns: 1fr;                
-    }
-} 
 
-@media (min-width: 800px){
-    section>div>div{
-        display: flex;                       
-        justify-content: space-between;  
-        align-items: baseline;      
-    }
+.dish-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: white;
+  border: 2px solid transparent;
+  border-radius: 35px;
+  filter: drop-shadow(17px 19px 24px rgba(0,0,0,0.13));
+  cursor: pointer;
+  text-align: left;
+  padding: 30px 40px;
+}
 
-    section>div{
-        display: grid;                       
-        grid-template-columns: repeat(3, 1fr); 
-    }
+.dish-card:hover{
+  border-color: tomato;
+  border-width: 2px;
 }
-.my-button,
-.my-button:focus,
-.my-button:active {
-    border: none !important;
-    outline: none !important;
-    font-size: 20px;
+
+.dish-card:hover .add-button{
+  background-color: #d1cfca;
 }
-.my-button:active {
-  background-color: lightgreen;
-  color: green;
-} 
-.active1{
-background-color: lightgreen;
-  color: green;
-  border: none !important;
-    outline: none !important;
+
+.dish-card img{
+  width: 100%;
+  height: auto;
+  border-radius: 35px;
+  margin-bottom: 10px;
+}
+
+.price, .name{
+  font-size: 20px;
+  margin: 0;
+}
+
+.price, .name, .weight {
+  text-align: left;
+}
+
+.weight {
+  color: grey;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.add-button {
+  width: 100%;
+  background-color: #f1eee9;
+  cursor: pointer;
+  margin-top: 2px;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 10px 30px;
+  font-weight: 700;
+}
+
+#soup, #main, #drink, #desert, #salad, #totalPrice{
+  display: none;
+}
+
+#orderForm h2{
+  text-align: center;
+}
+
+#orderFormContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.form-cols {
+  max-width: 850px;
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+}
+
+.orderFormDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formPS{
+  color: grey;
+  font-style: italic; 
+  font-size: 12px;
+}
+
+#deliveryTime {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+#deliveryTime label {
+  display: block;
+  gap: 10px;
+}
+
+#soup-select, #main-select, #drink-select, #nameField, #emailField, #phoneField, #addressField, #exactTime{
+  box-sizing: border-box;
+  width: 250px;
+  height: 30px;
+}
+
+.button-row{
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.button-row button{
+  background-color: white;
+  width: calc(50% - 5px);
+  height: 30px;
+}
+
+.filters-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filetr-btn {
+  font-size: 16px;
+  color: #489a72;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.filetr-btn.active{
+  background-color: #d2eedb;
+  border-radius: 10px;
+}
+
+.dish-card.selected {
+  border-color: tomato; 
+}
+
+
+
+#combo-options-section {
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.combo-option {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100px;
+}
+
+.dish img {
+  max-width: 60px;
+  height: auto;
+}
+
+.dish img:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+.dish-title {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dessert-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dessert-image {
+  max-width: 60px;
+  height: auto;
+}
+
+.dessert-image:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+.dessert-note {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+.notification-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid black;
+  padding: 20px;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-message {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.notification-button {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.notification-button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+@media screen and (max-width: 800px){
+  .menu-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+  }
+}
+
+@media screen and (max-width: 600px){
+.menu-section h2{
+  text-align: center;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
 }

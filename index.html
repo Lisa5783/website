@@ -1,81 +1,100 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Website</title>
+
     <link rel="stylesheet" href="/styles/styles.css">
-</head>
-<body class="main"> 
-    <header>
-        <h1>Food Construct </h1>
-        <nav>
-            <a href="/index.html" class="active">О нас</a>
-            <a href="/pages/makelanch.html">Собрать ланч</a>
-            <a href="orders">Заказы</a>
-            <a href="#contacts">Контакты</a>
-        </nav>
-    </header>
-   <main>
-        <section id="about">
-             <img src="/images/food.png" alt="food" >  
-             <h2> О нас</h2>
-            <p>Food Construct- доставка бизнес-ланчей в Москве. Мы привезем вам горячую
-                вкусную еду в любую точку города к назначенному времени.</p>
-        </section>
-        <section>
-            <h2>Преимущества Food Construct</h2>
-            <ul>
-                <li>Привозим обед к назначенному времени без опозданий</li>
-                <li>Надежно упаковываем блюда в удобные контейнеры бесплатно</li>
-                <li>Доставляем ланчи весь день с 7:00 до 23:00</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Топ-5 популярных блюд</h2>
-            <table>
-                <tr>
-                    <th></th>
-                    <th>Название</th>
-                    <th>Кол-во заказов в неделю</th>
-                    <th>Цена</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Лазанья</td>
-                    <td>185</td>
-                    <td>385₽</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Том Ям с креветками</td>
-                    <td>161</td>
-                    <td>365₽</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Норвежский суп</td>
-                    <td>144</td>
-                    <td>270₽</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Жареная картошка с грибами</td>
-                    <td>132</td>
-                    <td>150₽</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Котлеты из курицы с картофельным пюре</td>
-                    <td>128</td>
-                    <td>225₽</td>
-                </tr>
-            </table>
-        </section>
-   </main> 
-   <footer id="contacts">
-    <p>Позвонить нам <a href="tel:+70000000000">+7-000-000-00-00</a> </p>
-   </footer>
-</body>
+  </head>
+    <body>
+
+        <header>
+            <h1 id="Title"> Food construct </h1>
+            <nav class="main-menu">
+                <ul>
+                    <li><a href="/index.html" class="active">О нас</a></li>
+                    <li><a href="/pages/makelanch.html">Собрать ланч</a></li>
+                    <li><a href="#orders">Заказы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                    <li><a href="/pages/autentificat.html">Войти</a></li>
+                </ul>    
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+
+                <section id = "aboutUs">
+                    <img src="/images/food.png" class="foodPicture" alt="food">
+                    <h2 id="aboutHead"> О нас </h2>
+                    <p> 
+                        Food Construct - доставка бизнес-ланчей в Москве. Мы привезем вам горячую вкусную еду в любую точку города к
+                        назначенному времени.
+                    </p>
+                </section>
+
+                <section id = "advantages">
+                    <h2 id="ourAdvantages"> Преимущества Food Construct </h2>
+                    <ul id = "adlist">
+                        <li> Привозим обед к назначенному времени без опозданий </li>
+                        <li> Надежно упаковываем блюда в удобные контейнеры бесплатно </li>
+                        <li> Доставляем ланчи весь день с 7.00 до 23.00 </li>   
+                    </ul>
+                </section>
+        
+                <section id = "topDishes">
+                    <h2 id="top5"> Топ-5 популярных блюд </h2>
+                    <table id="top5dishes">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Название</th>
+                                <th>Кол-во заказов в неделю</th>
+                                <th>Цена</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Лазанья</td>
+                                <td>185</td>
+                                <td>385&#8381;</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Том ям с креветками</td>
+                                <td>161</td>
+                                <td>365&#8381;</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Норвежский суп</td>
+                                <td>144</td>
+                                <td>270&#8381;</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Жареная картошка с грибами</td>
+                                <td>132</td>
+                                <td>150&#8381;</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Котлеты из курицы с картофельным пюре</td>
+                                <td>128</td>
+                                <td>225&#8381;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+        
+        <footer id="contacts">
+            <div class="footerContainer">
+                <p> Позвонить нам +7-000-000-00-00 </p>
+            </div>
+        </footer>  
+  </body>
 </html>
